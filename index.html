@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/Menu.css">
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function feedback() {
+
+            var feedback = document.getElementById("textarea").value;
+            if (feedback == "") {
+
+                document.getElementById("error_feed").innerHTML = "מלא בבקשה!";
+
+
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <ul class="list1">
+            <li class="li1"><a href="AcouGuitar.html">גיטרה אקוסטית</a></li>
+            <li class="li1"><a href="Classicguit.html">גיטרה קלאסית</a></li>
+            <li class="li1"><a href="Famous.html">גיטריסטים מפורסמים</a></li>
+            <li class="li1"><a href="Equip.html">ציוד נלווה</a></li>
+            <li class="li1"><a href="Index.html"><img class="logo" src="images/logo1.png" /></a></li>
+            <li class="li1"><a href="Elecguitar.html">גיטרה חשמלית</a></li>
+            <li class="li1"><a href="History.html">היסטוריה</a></li>
+            <li class="li1"><a href="Login1.html">הרשמה</a></li>
+
+
+
+        </ul>
+    </div>
+    <h1 class="title">ברוכים הבאים לאתר הגיטרות</h1>
+    <div class="desc">
+        אתר הגיטרות מאפשר לכם להבין קצת יותר על גיטרות.<br />
+        יש שורה המאפשרת לכם לנווט בין הדפים .
+        <br />
+        ניווט נעים!
+
+
+    </div>
+    <table>
+        <tr>
+
+            <td>
+
+                <label class="desc">השאיר פידבק :)</label>
+
+            </td>
+            <td>
+                <textarea id="textarea"></textarea>
+
+
+
+            </td>
+            <td>
+                <label style="color:red; font-size: 20px" id="error_feed"></label>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value ="שלח" padding:20px 18px; onclick="feedback()"/>
+
+
+            </td>
+
+
+
+        </tr>
+    </table>
+</body>
+</html>

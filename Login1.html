@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/Login1.css">
+    <script>
+        function verifyPassword() {
+            var pw = document.getElementById("password").value;
+            
+            if (pw == "") {
+                document.getElementById("pass_error").innerHTML = "**מלא את הסיסמא !";
+
+            }
+
+            
+            if (pw.length < 8) {
+                document.getElementById("pass_error").innerHTML = "**סיסמא חייבת להיות בעלת לפחות 8 תווים";
+
+            }
+
+            
+            if (pw.length > 15) {
+                document.getElementById("pass_error").innerHTML = "**הסיסמא לא תעלה על 15 תווים";
+
+
+            }
+        }
+        function matchpass() {
+            var firstpassword = document.getElementById("password").value;
+            var secondpassword = document.getElementById("confirmpass").value;
+            if (firstpassword == secondpassword) {
+
+                document.getElementById("error_unmatch").innerHTML = "סיסמא תואמת!";
+                document.getElementById("error_unmatch1").innerHTML = "";
+            }
+            else {
+                document.getElementById("error_unmatch").innerHTML = "";
+                document.getElementById("error_unmatch1").innerHTML = "סיסמא לא תואמת!";
+
+            }
+        }
+        function email() {
+
+            var email = document.getElementById("gmail").value;
+            if (email == "") {
+                document.getElementById("email_error").innerHTML = "מלא אימייל!";
+
+            }
+            else {
+
+                document.getElementById("email_error").innerHTML = "";
+
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <ul class="list1">
+            <li class="li1"><a href="AcouGuitar.html">גיטרה אקוסטית</a></li>
+            <li class="li1"><a href="Classicguit.html">גיטרה קלאסית</a></li>
+            <li class="li1"><a href="Famous.html">גיטריסטים מפורסמים</a></li>
+            <li class="li1"><a href="Equip.html">ציוד נלווה</a></li>
+            <li class="li1"><a href="Index.html"><img class="logo" src="images/logo1.png" /></a></li>
+            <li class="li1"><a href="Elecguitar.html">גיטרה חשמלית</a></li>
+            <li class="li1"><a href="History.html">היסטוריה</a></li>
+            <li class="li1"><a href="Login1.html">הרשמה</a></li>
+
+
+        </ul>
+    </div>
+
+    <h1 style="font-size:100px" ; align="center" margin: auto; class="form">הרשמה</h1>
+    <form name="f1" method="get" action="Index.html">
+        <table align="center" border="0" style="color:white; margin:auto">
+            <tr>
+                <td>
+                    <label for="fname" ; class="form">שם פרטי: </label>
+                </td>
+                <td>
+
+                    <input type="text" class="ip2" id="fname" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname" class="form">שם משפחה: </label>
+                </td>
+                <td>
+
+                    <input type="text" class="ip2" id="lname" name="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="username" class="form">שם משתמש: </label>
+                </td>
+                <td>
+
+                    <input type="text" class="ip2" id="username" name="username">
+                </td>
+            <tr>
+                <td>
+                    <label for="email" class="form">אימייל: </label>
+                </td>
+                <td>
+
+                    <input type="email" class="ip2" id="gmail" name="gmail" required>
+                </td>
+                <td>
+                    <p id="email_error" style="color:red"></p>
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="password" class="form">סיסמא: </label>
+                </td>
+
+                <td>
+
+                    <input type="password" class="ip2" id="password" name="password" required>
+                </td>
+                <td>
+                    <p id="pass_error" style="color:red"></p>
+
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="confirmpass" class="form">אימות סיסמא: </label>
+                </td>
+                <td>
+
+                    <input type="password" class="ip2" id="confirmpass" name="confirmpass" required>
+
+                </td>
+                <td>
+                    <p id="error_unmatch"></p>
+
+                    <p id="error_unmatch1" style="color:red"></p>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="phone" class="form">טלפון: </label>
+                </td>
+                <td>
+
+                    <input type="text" class="ip2" id="phone" name="phone">
+                </td>
+            </tr>
+            <tr align="center" margin: auto;>
+                <td>
+
+                    <label for="gender" class="form">מין: </label>
+
+                    <input type="radio" id="male" name="gender" value="male" class="form">
+                    <label for="male" class="form">זכר</label>
+
+                    <input type="radio" id="female" name="gender" value="female" class="form">
+                    <label for="female" class="form">נקבה</label>
+
+                    <input type="radio" id="other" name="gender" value="other" class="form">
+                    <label for="other" class="form">אחר</label>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="area" class="form">איזור: </label>
+
+                    <Select name="City">
+                        <option value="center">מרכז</option>
+                        <option value="north">צפון</option>
+                        <option value="south">דרום</option>
+                    </Select>
+                </td>
+
+
+
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="date">תאריך לידה: </label>
+                    <input type="date" id="date" name="date" value="date">
+
+
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <input type="submit" value="הרשמה" onclick="matchpass(); verifyPassword(); email()" />
+
+
+                </td>
+
+
+            </tr>
+        </table>
+
+
+
+
+    </form>
+    
+</body>
+</html>
